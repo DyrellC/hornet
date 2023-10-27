@@ -30,6 +30,7 @@ shimmer*/
 
 # snapshot dir
 snapshots/
+privatedb/
 
 # log files
 hornet.log
