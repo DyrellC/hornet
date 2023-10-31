@@ -131,9 +131,9 @@ docker run -d \
   docker run -d \
     --name dashboard_$modifier \
     --network "tangle_bridge"  \
-    -p $DASHBOARD_PORT:8081/udp \
+    -p $DASHBOARD_PORT:8081/tcp \
     --ip $DASHBOARD_HOST \
-    dyrellc/inx-dashboard:v0.0.1 \
+    iotaledger/inx-dashboard:1.0-rc \
     --inx.address=$HOST:$INX_PORT \
     --dashboard.bindAddress=0.0.0.0:8081 \
     --dashboard.auth.passwordHash=577eb97f8faf2af47ff957b00827d6bfe9d05b810981e3073dc42553505282c1 \

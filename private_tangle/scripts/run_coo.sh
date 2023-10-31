@@ -61,6 +61,7 @@ PEER_HOST="172.20.0.11"
 COO="172.20.0.20"
 INDEXER="172.20.0.21"
 FAUCET="172.20.0.22"
+DASHBOARD="172.20.0.23"
 PORT=14280
 PEERING_PORT=14180
 
@@ -211,3 +212,17 @@ docker run -d \
   --faucet.rateLimit.enabled=false \
   --profiling.enabled=true \
   --profiling.bindAddress=$FAUCET:6030
+
+    echo "Starting Coo Dashboard"
+    docker run -d \
+      --name coo_dashboard \
+      --network "tangle_bridge"  \
+      -p 8181:8081/tcp \
+      --ip $DASHBOARD \
+      iotaledger/inx-dashboard:1.0-rc \
+      --inx.address=$HOST:9029 \
+      --dashboard.bindAddress=0.0.0.0:8081 \
+      --dashboard.auth.passwordHash=577eb97f8faf2af47ff957b00827d6bfe9d05b810981e3073dc42553505282c1 \
+      --dashboard.auth.passwordSalt=e5d8d0bd3bb9723236177b4713a11580c55b69a51e7055dd11fa1dad3b8f6d6c \
+      --prometheus.enabled=false \
+      --profiling.enabled=false
