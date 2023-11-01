@@ -19,12 +19,12 @@
     },
     "publicKeyRanges": [
       {
-        "key": "dcca40d18d91f6cc5af06ade5afff8a72043f4b92d4528e2bbf1dd46dc229ab8",
+        "key": "b99039cd4ad68a2c654993013da777cd202e8ae23dbb54c3a33f026ceda32282",
         "start": 0,
         "end": 0
       },
       {
-        "key": "111d62a70ad718e044dbe629455d5db512e0b4ace6d31b270906b2d065dbf873",
+        "key": "f6f6f0dbea6b24b87378c6a4c2f50d505e15300eafc06d379dad1e9ec3fe3e2d",
         "start": 0,
         "end": 0
       }
@@ -36,14 +36,14 @@
   "p2p": {
     "db": {
       "path": "p2pstore"
+    },
+    "autopeering": {
+      "enabled": true,
+      "bindAddress": "0.0.0.0:14626",
+      "entryNodes": [
+        "/ip4/172.20.0.11/udp/14626/autopeering/2jjmEVCYCxnu3EZZMZAAt2Rsq4hW489d49obsqWVVQNG"
+      ]
     }
-  },
-  "autopeering": {
-    "enabled": true,
-    "bindAddress": "0.0.0.0:14626",
-    "entryNodes": [
-      "/ip4/127.0.0.1/udp/14600/autopeering/2bPhTc5a4saVWQv7gtcRnwyYneZE2FfLZneE5PKaKwh4"
-    ]
   },
   "snapshots": {
     "fullPath": "snapshots/full_snapshot.bin",
